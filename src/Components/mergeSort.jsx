@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Binary from "./binario";
 
 class Merge extends Component{
     constructor(props){
@@ -10,11 +11,13 @@ class Merge extends Component{
     }
 
     render(){
+        console.log("array",this.state.array)
         return(
             <div>
                 <h3>Merge sort</h3>
                 <button onClick={this.triggerFunc.bind(this)}>Merge sort</button>
                 <p>Result time Merge {this.state.time}</p>
+                <Binary array={this.state.array}/>
             </div>
         )
     }
@@ -43,6 +46,10 @@ class Merge extends Component{
             sortedArr.push(leftArr.shift());
           while (rightArr.length)
             sortedArr.push(rightArr.shift());
+
+            this.setState({
+                array: sortedArr
+            })
           return sortedArr;
     }
     mergesort(arr) {
