@@ -21,7 +21,7 @@ class Bubble extends Component {
     bubbleSort(){
         let swapp;
         let n = this.state.array.length-1;
-        let x=this.state.array;
+        let x= this.state.array;
         do {
             swapp = false;
             for (let i=0; i < n; i++)
@@ -36,6 +36,9 @@ class Bubble extends Component {
             }
             n--;
         } while (swapp);
+        this.setState({
+            array: x
+        })
         return x
     }
 
