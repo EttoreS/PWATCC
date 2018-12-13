@@ -38,6 +38,7 @@ class Binary extends React.Component {
         return(
             <div>
                 <h3>BUSCA BINARIA</h3>
+                <h5>organize o array no Merge Sort antes de procurar</h5>
                 <form onSubmit={this.handleSubmit}>
                     <input type="number" value={this.state.item} onChange={this.handleChange}/>
                     <button>Procurar</button>
